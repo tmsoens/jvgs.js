@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JVGS</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #fff; }
+  canvas { display: block; }
+  #help {
+    position: fixed; left: 12px; bottom: 10px;
+    font: 12px/1.4 system-ui, sans-serif; color: #888;
+    pointer-events: none; transition: opacity 1s;
+  }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="help">arrows: walk &middot; space: jump &middot; ctrl / x: use item &middot; esc: quit</div>
+<script src="js/resources.js"></script>
+<script src="js/math.js"></script>
+<script src="js/sketch.js"></script>
+<script src="js/platform.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/game.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/main.js"></script>
+<script>
+  setTimeout(() => { document.getElementById("help").style.opacity = 0; }, 8000);
+</script>
+</body>
+</html>
