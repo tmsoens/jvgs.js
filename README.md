@@ -90,4 +90,8 @@ diff, then run `npm run test:update` and commit the new snapshots.
   doesn't close paths, `H`/`V` path commands are ignored, and the swept bounding-box test and the
   matrix composition order are unchanged.
 
-Original game © Jasper Van der Jeugt, released under the WTFPL (see `LICENSE`).
+## License
+
+This port is released under the GNU General Public License, version 2 (see `LICENSE`).
+
+The original game is © Jasper Van der Jeugt, released under the WTFPL.

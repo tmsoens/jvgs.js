@@ -2,7 +2,7 @@
   "name": "jvgs.js",
   "private": true,
   "description": "A JavaScript/canvas port of JVGS",
-  "license": "WTFPL",
+  "license": "GPL-2.0-only",
   "scripts": {
     "build": "node tools/build-resources.mjs",
     "test": "node --test \"test/*.test.mjs\"",
