@@ -4,11 +4,11 @@
     <entity id="player" filename="resources/player/player.xml">
         <position x="630" y="180" />
     </entity>
-    <entity id="play" script="resources/level-main-menu/play.lua">
+    <entity id="play" script="level-main-menu/play">
         <position x="1164" y="480" />
         <radius x="50" y="50" />
     </entity>
-    <entity id="quit" script="resources/level-main-menu/quit.lua">
+    <entity id="quit" script="level-main-menu/quit">
         <position x="200" y="480" />
         <radius x="50" y="50" />
     </entity>

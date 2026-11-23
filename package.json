@@ -1,0 +1,14 @@
+{
+  "name": "jvgs.js",
+  "private": true,
+  "description": "A JavaScript/canvas port of JVGS",
+  "license": "WTFPL",
+  "scripts": {
+    "build": "node tools/build-resources.mjs",
+    "test": "node --test \"test/*.test.mjs\"",
+    "test:update": "node --test --test-update-snapshots \"test/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=23.4"
+  }
+}

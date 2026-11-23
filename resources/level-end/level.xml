@@ -25,7 +25,7 @@
     <entity id="velociraptor-02" filename="resources/velociraptor/velociraptor.xml">
         <position x="10255" y="1250" />
     </entity>
-    <entity id="end" script="resources/level-end/end.lua">
+    <entity id="end" script="level-end/end">
         <position x="13427" y="2363" />
         <radius x="50" y="50" />
     </entity>

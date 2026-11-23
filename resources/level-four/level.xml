@@ -64,7 +64,7 @@
     <entity id="crown-01" filename="resources/level-four/crown.xml">
         <position x="5665" y="2840" />
     </entity>
-    <entity id="teleport-01" script="resources/level-four/teleport-to-start.lua">
+    <entity id="teleport-01" script="level-four/teleport-to-start">
         <position x="5949" y="2840" />
         <radius x="50" y="50" />
     </entity>
@@ -97,7 +97,7 @@
     <entity id="crown-02" filename="resources/level-four/crown.xml">
         <position x="8485" y="240" />
     </entity>
-    <entity id="teleport-02" script="resources/level-four/teleport-to-start.lua">
+    <entity id="teleport-02" script="level-four/teleport-to-start">
         <position x="8713" y="200" />
         <radius x="50" y="50" />
     </entity>
@@ -124,7 +124,7 @@
     <entity id="crown-03" filename="resources/level-four/crown.xml">
         <position x="705" y="1310" />
     </entity>
-    <entity id="teleport-03" script="resources/level-four/teleport-to-start.lua">
+    <entity id="teleport-03" script="level-four/teleport-to-start">
         <position x="505" y="1310" />
         <radius x="50" y="50" />
     </entity>
@@ -147,7 +147,7 @@
     <entity id="crown-04" filename="resources/level-four/crown.xml">
         <position x="1805" y="3410" />
     </entity>
-    <entity id="teleport-04" script="resources/level-four/teleport-to-start.lua">
+    <entity id="teleport-04" script="level-four/teleport-to-start">
         <position x="2155" y="3470" />
         <radius x="50" y="50" />
     </entity>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entity script="resources/common-scripts/invincible-enemy.lua" speed = "0.1"
+<entity script="common-scripts/invincible-enemy" speed = "0.1"
         collisionchecker="false">
     <positioner type="naivepositioner" />
     <radius x="19" y="75" />

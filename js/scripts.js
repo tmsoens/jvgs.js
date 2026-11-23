@@ -1,8 +1,9 @@
 // The game's Lua scripts (resources/**/*.lua and resources/modules/*.lua),
-// ported to JavaScript. Each entity names its script by the original .lua
-// path; the ScriptManager looks up the handler table registered under that
-// path and calls the handler for the event type with (self, event), which is
-// what `events.trigger{...}` did in Lua.
+// ported to JavaScript. Each entity names its script with a plain id (its
+// original path minus "resources/" and ".lua", e.g. "level-city/cloud" or
+// "common-scripts/enemy"); the ScriptManager looks up the handler table
+// registered under that id and calls the handler for the event type with
+// (self, event), which is what `events.trigger{...}` did in Lua.
 "use strict";
 
 /** Lua's math.random(m, n): integer in [m, n] (arguments truncated). */
@@ -167,7 +168,7 @@ const playerWeapons = {
     },
 };
 
-ScriptManager.register("resources/player/script.lua", {
+ScriptManager.register("player/script", {
     spawn(self) { self.setBool("ready", true); },
     die() { common.gameOver(); },
     action(self) {
@@ -202,7 +203,7 @@ ScriptManager.register("resources/player/script.lua", {
 
 /* --- common-scripts ---------------------------------------------------- */
 
-ScriptManager.register("resources/common-scripts/enemy.lua", {
+ScriptManager.register("common-scripts/enemy", {
     collision(self, event) {
         const collider = event.getCollider();
         // React only on player collision.
@@ -217,7 +218,7 @@ ScriptManager.register("resources/common-scripts/enemy.lua", {
     },
 });
 
-ScriptManager.register("resources/common-scripts/invincible-enemy.lua", {
+ScriptManager.register("common-scripts/invincible-enemy", {
     collision(self, event) {
         const collider = event.getCollider();
         if (!common.isDead(self) && !common.isDead(collider)) common.damage(collider, 1);
@@ -229,16 +230,16 @@ ScriptManager.register("resources/common-scripts/invincible-enemy.lua", {
 
 /* --- weapons ----------------------------------------------------------- */
 
-ScriptManager.register("resources/knife/obtain-knife.lua",
+ScriptManager.register("knife/obtain-knife",
     weaponPickup("knife", "left ctrl to throw a knife"));
-ScriptManager.register("resources/grenade/obtain-grenade.lua",
+ScriptManager.register("grenade/obtain-grenade",
     weaponPickup("grenade", "left ctrl to throw a grenade"));
-ScriptManager.register("resources/hat/obtain-hat.lua",
+ScriptManager.register("hat/obtain-hat",
     weaponPickup("hat", "left ctrl to jump in-air"));
-ScriptManager.register("resources/clock/obtain-clock.lua",
+ScriptManager.register("clock/obtain-clock",
     weaponPickup("clock", "left ctrl to save time"));
 
-ScriptManager.register("resources/knife/script.lua", {
+ScriptManager.register("knife/script", {
     spawn(self) { self.setTimer(500); },
     collision(self, event) {
         const collider = event.getCollider();
@@ -250,7 +251,7 @@ ScriptManager.register("resources/knife/script.lua", {
     timer(self) { self.setGarbage(); },
 });
 
-ScriptManager.register("resources/grenade/script.lua", {
+ScriptManager.register("grenade/script", {
     spawn(self) { self.setTimer(1000 + 4000 * Math.random()); },
     collision(self, event) {
         const collider = event.getCollider();
@@ -274,7 +275,7 @@ ScriptManager.register("resources/grenade/script.lua", {
 
 /* --- spikey ball ------------------------------------------------------- */
 
-ScriptManager.register("resources/spikey-ball/ball-script.lua", {
+ScriptManager.register("spikey-ball/ball-script", {
     collision(self, event) {
         // Only after being dropped.
         if (self.isCollisionChecker()) {
@@ -285,7 +286,7 @@ ScriptManager.register("resources/spikey-ball/ball-script.lua", {
     },
 });
 
-ScriptManager.register("resources/spikey-ball/cable-script.lua", {
+ScriptManager.register("spikey-ball/cable-script", {
     collision(self) {
         const level = self.getLevel();
         const m = /^(.+)-(.+)$/.exec(self.getId());
@@ -300,36 +301,36 @@ ScriptManager.register("resources/spikey-ball/cable-script.lua", {
 
 /* --- main menu --------------------------------------------------------- */
 
-ScriptManager.register("resources/level-main-menu/play.lua", {
+ScriptManager.register("level-main-menu/play", {
     collision() { common.continue(); },
 });
 
-ScriptManager.register("resources/level-main-menu/quit.lua", {
+ScriptManager.register("level-main-menu/quit", {
     collision() { InputManager.sendQuitEvent(); },
 });
 
 /* --- level scripts ----------------------------------------------------- */
 
-ScriptManager.register("resources/level-intro/tutorial-01.lua", {
+ScriptManager.register("level-intro/tutorial-01", {
     spawn() { effects.staticText(new Vector2D(420, 170), "arrow keys to walk"); },
 });
-ScriptManager.register("resources/level-intro/tutorial-02.lua",
+ScriptManager.register("level-intro/tutorial-02",
     tutorial("spacebar to jump", null, new Vector2D(1040, 170)));
-ScriptManager.register("resources/level-intro/tutorial-03.lua",
+ScriptManager.register("level-intro/tutorial-03",
     tutorial("jump on enemies to kill them", new Vector2D(0, -100)));
-ScriptManager.register("resources/level-intro/tutorial-04.lua",
+ScriptManager.register("level-intro/tutorial-04",
     tutorial("do not jump on spikey enemies", new Vector2D(0, -100)));
 
-ScriptManager.register("resources/level-intro/heart.lua", levelExit("resources/level-sea/level.xml"));
-ScriptManager.register("resources/level-sea/star.lua", levelExit("resources/level-planet/level.xml"));
-ScriptManager.register("resources/level-planet/star.lua", levelExit("resources/level-knife/level.xml"));
-ScriptManager.register("resources/level-knife/star.lua", levelExit("resources/level-nostalgia/level.xml"));
-ScriptManager.register("resources/level-nostalgia/spiral.lua", levelExit("resources/level-run/level.xml"));
-ScriptManager.register("resources/level-run/triforce.lua", levelExit("resources/level-city/level.xml"));
-ScriptManager.register("resources/level-city/cloud.lua", levelExit("resources/level-four/level.xml"));
-ScriptManager.register("resources/level-contact/girl.lua", levelExit("resources/level-end/level.xml"));
+ScriptManager.register("level-intro/heart", levelExit("resources/level-sea/level.xml"));
+ScriptManager.register("level-sea/star", levelExit("resources/level-planet/level.xml"));
+ScriptManager.register("level-planet/star", levelExit("resources/level-knife/level.xml"));
+ScriptManager.register("level-knife/star", levelExit("resources/level-nostalgia/level.xml"));
+ScriptManager.register("level-nostalgia/spiral", levelExit("resources/level-run/level.xml"));
+ScriptManager.register("level-run/triforce", levelExit("resources/level-city/level.xml"));
+ScriptManager.register("level-city/cloud", levelExit("resources/level-four/level.xml"));
+ScriptManager.register("level-contact/girl", levelExit("resources/level-end/level.xml"));
 
-ScriptManager.register("resources/level-four/crown.lua", {
+ScriptManager.register("level-four/crown", {
     collision(self, event) {
         const collider = event.getCollider();
         if (common.isPlayer(collider)) {
@@ -347,17 +348,17 @@ ScriptManager.register("resources/level-four/crown.lua", {
     timer() { common.nextLevel("resources/level-contact/level.xml"); },
 });
 
-ScriptManager.register("resources/level-four/teleport-to-start.lua", {
+ScriptManager.register("level-four/teleport-to-start", {
     collision(self, event) {
         const collider = event.getCollider();
         if (common.isPlayer(collider)) collider.setPosition(new Vector2D(2425, 1340));
     },
 });
 
-// girl.lua in level-end is empty in the original.
-ScriptManager.register("resources/level-end/girl.lua", {});
+// girl in level-end is empty in the original.
+ScriptManager.register("level-end/girl", {});
 
-ScriptManager.register("resources/level-end/end.lua", {
+ScriptManager.register("level-end/end", {
     collision(self, event) {
         const collider = event.getCollider();
         if (common.isPlayer(collider) && self.getBool("girl-arrived")) {

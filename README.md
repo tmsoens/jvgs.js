@@ -19,7 +19,7 @@ Esc to quit.
 | `js/platform.js` | SDL/OpenGL/SDL_mixer/FreeType replacements: canvas video manager, keyboard input, audio, localStorage persistence, outline font |
 | `js/effects.js` | `src/effect` – particles, text, invert, fade, time effects |
 | `js/game.js` | `src/game` – entities, controllers, positioners, cameras, sprites, levels, event queue |
-| `js/scripts.js` | the Lua scripts in `resources/` (`modules/*.lua` and every level/entity script) |
+| `js/scripts.js` | the original Lua scripts (`modules/*.lua` and every level/entity script), registered by id (e.g. `level-city/cloud`) as referenced from the XML `script="..."` attributes |
 | `js/main.js` | `main.lua` + `LevelManager::run()` |
 | `js/resources.js` | generated bundle of `resources/` |
 
@@ -31,6 +31,27 @@ node tools/build-resources.mjs
 
 The build embeds the SVG/XML files as text and the `.ogg` sounds as data URLs. It also extracts
 the glyph outlines from `resources/font.ttf`, which the game draws with the sketchy renderer.
+
+## Tests
+
+```sh
+npm test               # node --test, no dependencies (Node 23.4 or later)
+npm run test:update    # rewrite the snapshots after an intended change
+```
+
+The tests load the real game scripts into a Node `vm` context. Browser APIs (canvas, `Path2D`, audio,
+`localStorage`, `DOMParser`) are replaced by small stand-ins in `test/support/`, and `Math.random` is seeded,
+so every run is deterministic.
+
+- `test/resources.test.mjs` checks that the bundle matches `resources/`, that every XML file parses, and that
+  every file, sound, script id and controller/positioner/camera type it refers to exists.
+- `test/levels.test.mjs` loads, simulates and renders every level. It compares the result with
+  `levels.test.mjs.snapshot`, which records entity states and a hash of every drawing call.
+- `test/gameplay.test.mjs` plays through scenarios: the menu, every level exit and saving, crowns, the
+  ending, enemies, each weapon, the controls and `main.js`.
+
+If a snapshot test fails after a change that is *supposed* to alter behaviour or visuals, look at the
+diff, then run `npm run test:update` and commit the new snapshots.
 
 ## Differences from the original
 

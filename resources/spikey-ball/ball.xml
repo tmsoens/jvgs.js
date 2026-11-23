@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entity script="resources/spikey-ball/ball-script.lua" speed="0"
+<entity script="spikey-ball/ball-script" speed="0"
         collisionchecker="false">
     <positioner type="collisiondestroypositioner" />
     <radius x="117" y="105" />

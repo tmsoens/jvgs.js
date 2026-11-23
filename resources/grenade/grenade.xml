@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entity script="resources/grenade/script.lua" speed="0.5"
+<entity script="grenade/script" speed="0.5"
         collisionchecker="false">
     <controller type="flystraightcontroller" />
     <positioner type="collisionresponsepositioner">

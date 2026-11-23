@@ -1,0 +1,2287 @@
+exports[`levels > resources/level-city/level.xml 1`] = `
+{
+  "firstFrame": "1bce80cd82952123",
+  "lastFrame": "eb4bcc277900545b",
+  "initial": [
+    {
+      "id": "player",
+      "x": 50,
+      "y": 50,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "plant-01",
+      "x": 656,
+      "y": 317,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "plant-02",
+      "x": 1029,
+      "y": 305,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "plant-03",
+      "x": 1240,
+      "y": 117,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "obtain-hat",
+      "x": 1440,
+      "y": 50,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 1611,
+      "y": 42,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "plant-04",
+      "x": 1727,
+      "y": 104,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "plant-05",
+      "x": 1967,
+      "y": 101,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "plant-06",
+      "x": 2050,
+      "y": 101,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "helidude-01",
+      "x": 4662,
+      "y": 555,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 2427,
+      "y": 128,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "cloud",
+      "x": 9220,
+      "y": 1080,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 50,
+      "y": 129.71,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "plant-01",
+      "x": 656,
+      "y": 177,
+      "vx": 0,
+      "vy": 0.1,
+      "health": "100"
+    },
+    {
+      "id": "plant-02",
+      "x": 1029,
+      "y": 255,
+      "vx": 0,
+      "vy": 0.1,
+      "health": "100"
+    },
+    {
+      "id": "plant-03",
+      "x": 1240,
+      "y": 133.67,
+      "vx": 0,
+      "vy": -0.1,
+      "health": "100"
+    },
+    {
+      "id": "obtain-hat",
+      "x": 1440,
+      "y": 50,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 1611,
+      "y": 150.87,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "plant-04",
+      "x": 1727,
+      "y": 114,
+      "vx": 0,
+      "vy": 0.1,
+      "health": "100"
+    },
+    {
+      "id": "plant-05",
+      "x": 1967,
+      "y": 211,
+      "vx": 0,
+      "vy": -0.1,
+      "health": "100"
+    },
+    {
+      "id": "plant-06",
+      "x": 2050,
+      "y": 101,
+      "vx": -0.1,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "helidude-01",
+      "x": 2724.79,
+      "y": 205.33,
+      "vx": -0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 4426.69,
+      "y": 429.83,
+      "vx": 0.19,
+      "vy": 0.05,
+      "health": "1"
+    },
+    {
+      "id": "cloud",
+      "x": 9220,
+      "y": 1080,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-contact/level.xml 1`] = `
+{
+  "firstFrame": "82af15f3d90a7036",
+  "lastFrame": "31416c22b00ffdca",
+  "initial": [
+    {
+      "id": "player",
+      "x": 200,
+      "y": 50,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-grenade",
+      "x": 2600,
+      "y": 400,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 1386,
+      "y": 250,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 1926,
+      "y": 773,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 2527,
+      "y": 803,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-02",
+      "x": 2537,
+      "y": 2026,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 711,
+      "y": 873,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-04",
+      "x": 1187,
+      "y": 819,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-05",
+      "x": 816,
+      "y": 1193,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 3113,
+      "y": 600,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-01",
+      "x": 1612,
+      "y": 887,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-02",
+      "x": 858,
+      "y": 888,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 1702,
+      "y": 1909,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 1702,
+      "y": 1909,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-03",
+      "x": 1702,
+      "y": 1909,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "plant-01",
+      "x": 1286,
+      "y": 1357,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "plant-02",
+      "x": 946,
+      "y": 1406,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "girl",
+      "x": 4430,
+      "y": 2150,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 205.21,
+      "y": 269.92,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-grenade",
+      "x": 2600,
+      "y": 400,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 1377.65,
+      "y": 283.04,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 1926,
+      "y": 788.45,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 2527,
+      "y": 836.17,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-02",
+      "x": 2561.89,
+      "y": 2045.39,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 711,
+      "y": 905.37,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-04",
+      "x": 1187,
+      "y": 852.33,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-05",
+      "x": 816,
+      "y": 1219.47,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 3113,
+      "y": 629.76,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-01",
+      "x": 1569.71,
+      "y": 910.66,
+      "vx": -0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-02",
+      "x": 721.01,
+      "y": 911.08,
+      "vx": 0.2,
+      "vy": -0.04,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 1500.11,
+      "y": 1252.68,
+      "vx": 0,
+      "vy": 0.2,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 1752.79,
+      "y": 1375.03,
+      "vx": 0,
+      "vy": 0.2,
+      "health": "1"
+    },
+    {
+      "id": "helidude-03",
+      "x": 1423.27,
+      "y": 1925.13,
+      "vx": -0.19,
+      "vy": -0.05,
+      "health": "1"
+    },
+    {
+      "id": "plant-01",
+      "x": 1279.51,
+      "y": 1310.79,
+      "vx": 0.01,
+      "vy": 0.1,
+      "health": "100"
+    },
+    {
+      "id": "plant-02",
+      "x": 946,
+      "y": 1226,
+      "vx": 0,
+      "vy": -0.1,
+      "health": "100"
+    },
+    {
+      "id": "girl",
+      "x": 4430,
+      "y": 2150,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-credits/level.xml 1`] = `
+{
+  "firstFrame": "a5d99eb0d5c7dbde",
+  "lastFrame": "525576128492c2bb",
+  "initial": [
+    {
+      "id": "player",
+      "x": 250,
+      "y": 210,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 250.37,
+      "y": 261.77,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-end/level.xml 1`] = `
+{
+  "firstFrame": "769550824eb73bb0",
+  "lastFrame": "bc35d3e7035f1137",
+  "initial": [
+    {
+      "id": "player",
+      "x": 200,
+      "y": 50,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "girl",
+      "x": 265,
+      "y": 176,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "helidude-01",
+      "x": 6887,
+      "y": 370,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 2982,
+      "y": 370,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 8860,
+      "y": 1390,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-02",
+      "x": 10255,
+      "y": 1250,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "end",
+      "x": 13427,
+      "y": 2363,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 200,
+      "y": 226.45,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "girl",
+      "x": 2987.81,
+      "y": 339.32,
+      "vx": 0,
+      "vy": 0.28,
+      "health": null
+    },
+    {
+      "id": "helidude-01",
+      "x": 4820.33,
+      "y": 370,
+      "vx": -0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 5048.67,
+      "y": 370,
+      "vx": 0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 8860,
+      "y": 1414.24,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-02",
+      "x": 10023.31,
+      "y": 1368.93,
+      "vx": -0.02,
+      "vy": 0.05,
+      "health": "1"
+    },
+    {
+      "id": "end",
+      "x": 13427,
+      "y": 2363,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-four/level.xml 1`] = `
+{
+  "firstFrame": "dbb0d7a39d52ea11",
+  "lastFrame": "c5cf413f3e23c2e0",
+  "initial": [
+    {
+      "id": "player",
+      "x": 2425,
+      "y": 1340,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 3412,
+      "y": 1540,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 2388,
+      "y": 1916,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-01",
+      "x": 2106,
+      "y": 1948,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 3196,
+      "y": 1812,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 4046,
+      "y": 1527,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 3732,
+      "y": 2290,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "clock",
+      "x": 4325,
+      "y": 2230,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "crown-01",
+      "x": 5665,
+      "y": 2840,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-01",
+      "x": 5949,
+      "y": 2840,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-04",
+      "x": 3422,
+      "y": 780,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-04",
+      "x": 4524,
+      "y": 289,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-05",
+      "x": 6954,
+      "y": 457,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "crown-02",
+      "x": 8485,
+      "y": 240,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-02",
+      "x": 8713,
+      "y": 200,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 1425,
+      "y": 1190,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-06",
+      "x": 735,
+      "y": 1287,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-knife",
+      "x": 875,
+      "y": 1060,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "crown-03",
+      "x": 705,
+      "y": 1310,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-03",
+      "x": 505,
+      "y": 1310,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "obtain-grenade",
+      "x": 1769,
+      "y": 1660,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-04",
+      "x": 1105,
+      "y": 2700,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-07",
+      "x": 1455,
+      "y": 3340,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-09",
+      "x": 1555,
+      "y": 3340,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-10",
+      "x": 1605,
+      "y": 3340,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "crown-04",
+      "x": 1805,
+      "y": 3410,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-04",
+      "x": 2155,
+      "y": 3470,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 2424.88,
+      "y": 1430.68,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 3176.55,
+      "y": 1409.98,
+      "vx": -0.08,
+      "vy": 0.18,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 4020.83,
+      "y": 1379.02,
+      "vx": 0,
+      "vy": -0.2,
+      "health": "1"
+    },
+    {
+      "id": "mouse-01",
+      "x": 2101.19,
+      "y": 1986.86,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 3177.02,
+      "y": 1864.1,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 4045.38,
+      "y": 1543.82,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 3732,
+      "y": 2314.7,
+      "vx": -0.01,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "clock",
+      "x": 4325,
+      "y": 2230,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "crown-01",
+      "x": 5665,
+      "y": 2840,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-01",
+      "x": 5949,
+      "y": 2840,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-04",
+      "x": 3401.72,
+      "y": 873.8,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-04",
+      "x": 6001.66,
+      "y": 339.76,
+      "vx": -0.2,
+      "vy": -0.01,
+      "health": "1"
+    },
+    {
+      "id": "helidude-05",
+      "x": 6558.17,
+      "y": 217.75,
+      "vx": 0.2,
+      "vy": -0.04,
+      "health": "1"
+    },
+    {
+      "id": "crown-02",
+      "x": 8485,
+      "y": 240,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-02",
+      "x": 8713,
+      "y": 200,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 1477.04,
+      "y": 1243.27,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-06",
+      "x": 738.64,
+      "y": 1120.33,
+      "vx": 0,
+      "vy": 0.2,
+      "health": "1"
+    },
+    {
+      "id": "obtain-knife",
+      "x": 875,
+      "y": 1060,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "crown-03",
+      "x": 705,
+      "y": 1310,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-03",
+      "x": 505,
+      "y": 1310,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "obtain-grenade",
+      "x": 1769,
+      "y": 1660,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-04",
+      "x": 1105,
+      "y": 2730.79,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-07",
+      "x": 1455,
+      "y": 3468.31,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-09",
+      "x": 1555,
+      "y": 3467.04,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-10",
+      "x": 1605,
+      "y": 3466.35,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "crown-04",
+      "x": 1805,
+      "y": 3410,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "teleport-04",
+      "x": 2155,
+      "y": 3470,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-intro/level.xml 1`] = `
+{
+  "firstFrame": "651d9ffe0a59733f",
+  "lastFrame": "2855c775576a39fd",
+  "initial": [
+    {
+      "id": "player",
+      "x": 320,
+      "y": 280,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "tutorial-intro",
+      "x": 0,
+      "y": 0,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "tutorial-02",
+      "x": 1040,
+      "y": 250,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "tutorial-03",
+      "x": 2273,
+      "y": 100,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 2540,
+      "y": 240,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 2940,
+      "y": 180,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "tutorial-04",
+      "x": 2980,
+      "y": 190,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 3500,
+      "y": 100,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "heart",
+      "x": 4360,
+      "y": 260,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 320,
+      "y": 321.11,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "tutorial-intro",
+      "x": 0,
+      "y": 0,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "tutorial-02",
+      "x": 1040,
+      "y": 250,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "tutorial-03",
+      "x": 2273,
+      "y": 100,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 2540,
+      "y": 268.8,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 2957.68,
+      "y": 214.61,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "tutorial-04",
+      "x": 2980,
+      "y": 190,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 3443.51,
+      "y": 193.43,
+      "vx": 0.02,
+      "vy": 0.02,
+      "health": "1"
+    },
+    {
+      "id": "heart",
+      "x": 4360,
+      "y": 260,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-knife/level.xml 1`] = `
+{
+  "firstFrame": "fdb3dc0da4058f7c",
+  "lastFrame": "d05014d489200a7d",
+  "initial": [
+    {
+      "id": "player",
+      "x": 80,
+      "y": 50,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-01",
+      "x": 2200,
+      "y": 400,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 2600,
+      "y": 200,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-knife",
+      "x": 3550,
+      "y": 470,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "spider-01",
+      "x": 3460,
+      "y": 660,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-02",
+      "x": 3800,
+      "y": 660,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-02",
+      "x": 6900,
+      "y": 840,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 7283,
+      "y": 600,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 7690,
+      "y": 500,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 7200,
+      "y": 350,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-02",
+      "x": 7600,
+      "y": 350,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "star",
+      "x": 6606,
+      "y": 170,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 80,
+      "y": 86.17,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-01",
+      "x": 2200,
+      "y": 431.98,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 2585.21,
+      "y": 241.54,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-knife",
+      "x": 3550,
+      "y": 470,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "spider-01",
+      "x": 3434.18,
+      "y": 705.17,
+      "vx": -0.2,
+      "vy": 0.07,
+      "health": "1"
+    },
+    {
+      "id": "spider-02",
+      "x": 3546.85,
+      "y": 698.48,
+      "vx": 0.2,
+      "vy": -0.02,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-02",
+      "x": 6900,
+      "y": 906.6,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 7148.03,
+      "y": 906.6,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 7690,
+      "y": 592.88,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 7304.41,
+      "y": 391.73,
+      "vx": -0.15,
+      "vy": -0.01,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-02",
+      "x": 7486.14,
+      "y": 390.85,
+      "vx": 0.15,
+      "vy": -0.01,
+      "health": "1"
+    },
+    {
+      "id": "star",
+      "x": 6606,
+      "y": 170,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-main-menu/main-menu.xml 1`] = `
+{
+  "firstFrame": "ff692f88e81fff78",
+  "lastFrame": "6c10377d6deb678d",
+  "initial": [
+    {
+      "id": "player",
+      "x": 630,
+      "y": 180,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "play",
+      "x": 1164,
+      "y": 480,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "quit",
+      "x": 200,
+      "y": 480,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 630,
+      "y": 216.92,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "play",
+      "x": 1164,
+      "y": 480,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "quit",
+      "x": 200,
+      "y": 480,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-nostalgia/level.xml 1`] = `
+{
+  "firstFrame": "611fe5e983fb5b2e",
+  "lastFrame": "986273666103caa0",
+  "initial": [
+    {
+      "id": "player",
+      "x": 230,
+      "y": 150,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 1300,
+      "y": 2480,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "clock",
+      "x": 3700,
+      "y": 2600,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 4100,
+      "y": 2500,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 4118,
+      "y": 2380,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 2286,
+      "y": 2083,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-03",
+      "x": 2036,
+      "y": 2235,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 2400,
+      "y": 2070,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-02",
+      "x": 3270,
+      "y": 2070,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-01",
+      "x": 1530,
+      "y": 2247,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-02",
+      "x": 1630,
+      "y": 2247,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 1221,
+      "y": 2175,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 2107,
+      "y": 1654,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-04",
+      "x": 2191,
+      "y": 1632,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 2398,
+      "y": 1582,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-04",
+      "x": 2818,
+      "y": 1613,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-05",
+      "x": 3121,
+      "y": 1705,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-05",
+      "x": 3802,
+      "y": 1658,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-06",
+      "x": 4083,
+      "y": 1700,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-06",
+      "x": 4493,
+      "y": 1423,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-07",
+      "x": 4583,
+      "y": 1045,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spiral",
+      "x": 4333,
+      "y": 940,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 230,
+      "y": 232.34,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 1300,
+      "y": 2544.22,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "clock",
+      "x": 3700,
+      "y": 2600,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 4100,
+      "y": 2571.94,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 2348.78,
+      "y": 2083.09,
+      "vx": -0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 4038.23,
+      "y": 2380.27,
+      "vx": 0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-03",
+      "x": 2004.53,
+      "y": 2064.08,
+      "vx": 0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 2634.3,
+      "y": 2152.01,
+      "vx": -0.15,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-02",
+      "x": 3025.7,
+      "y": 2152.01,
+      "vx": 0.15,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-01",
+      "x": 1547.49,
+      "y": 2271.36,
+      "vx": 0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spider-02",
+      "x": 1514.15,
+      "y": 2271.22,
+      "vx": 0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-02",
+      "x": 1221,
+      "y": 2192.14,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-03",
+      "x": 2107,
+      "y": 1670.71,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-04",
+      "x": 2191,
+      "y": 1649.11,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-03",
+      "x": 2182.98,
+      "y": 1636.84,
+      "vx": -0.02,
+      "vy": 0.05,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-04",
+      "x": 2818,
+      "y": 1619.78,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-05",
+      "x": 3121,
+      "y": 1721.67,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-05",
+      "x": 3578.34,
+      "y": 1719.27,
+      "vx": -0.02,
+      "vy": 0.05,
+      "health": "1"
+    },
+    {
+      "id": "velociraptor-06",
+      "x": 4082.59,
+      "y": 1705.02,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-06",
+      "x": 4493,
+      "y": 1440.06,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "mouse-07",
+      "x": 4596.87,
+      "y": 1071.61,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "spiral",
+      "x": 4333,
+      "y": 940,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-planet/level.xml 1`] = `
+{
+  "firstFrame": "5e6af39e67d81790",
+  "lastFrame": "e7a4ebe26d03fdc8",
+  "initial": [
+    {
+      "id": "player",
+      "x": 200,
+      "y": 20,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-hat",
+      "x": 3700,
+      "y": 160,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 2100,
+      "y": 40,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 3316,
+      "y": 40,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "plant-01",
+      "x": 1113,
+      "y": 250,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "plant-02",
+      "x": 2681,
+      "y": 793,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "plant-03",
+      "x": 2100,
+      "y": 740,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "star",
+      "x": 1564,
+      "y": 490,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 200,
+      "y": 118.82,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-hat",
+      "x": 3700,
+      "y": 160,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 2100,
+      "y": 201.77,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 3412.7,
+      "y": 264.1,
+      "vx": -0.15,
+      "vy": 0.05,
+      "health": "1"
+    },
+    {
+      "id": "plant-01",
+      "x": 1113,
+      "y": 296.67,
+      "vx": 0,
+      "vy": -0.1,
+      "health": "100"
+    },
+    {
+      "id": "plant-02",
+      "x": 2681,
+      "y": 761.33,
+      "vx": 0,
+      "vy": -0.1,
+      "health": "100"
+    },
+    {
+      "id": "plant-03",
+      "x": 2100,
+      "y": 740,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "star",
+      "x": 1564,
+      "y": 490,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
+
+exports[`levels > resources/level-run/level.xml 1`] = `
+{
+  "firstFrame": "b112ccd53ac39a4b",
+  "lastFrame": "7653e0815b4b4854",
+  "initial": [
+    {
+      "id": "player",
+      "x": 4880,
+      "y": 600,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "pacman-01",
+      "x": 4200,
+      "y": 0,
+      "vx": 0,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "obtain-knife",
+      "x": 5500,
+      "y": 560,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "ball-01",
+      "x": 13549,
+      "y": 110,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "cable-01",
+      "x": 13555,
+      "y": -138,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 1466,
+      "y": 5200,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "triforce",
+      "x": 700,
+      "y": 5230,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 4879.83,
+      "y": 2019.67,
+      "vx": 0,
+      "vy": 0.8,
+      "health": "0"
+    },
+    {
+      "id": "pacman-01",
+      "x": 4746.46,
+      "y": 565.54,
+      "vx": 0.02,
+      "vy": 0,
+      "health": "100"
+    },
+    {
+      "id": "obtain-knife",
+      "x": 5500,
+      "y": 560,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "ball-01",
+      "x": 13549,
+      "y": 110,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "cable-01",
+      "x": 13555,
+      "y": -138,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "velociraptor-01",
+      "x": 1450.66,
+      "y": 5244.52,
+      "vx": -0.01,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "triforce",
+      "x": 700,
+      "y": 5230,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": "resources/level-main-menu/main-menu.xml"
+}
+`;
+
+exports[`levels > resources/level-sea/level.xml 1`] = `
+{
+  "firstFrame": "d6a158b80e0cca65",
+  "lastFrame": "46e5b689639ba4de",
+  "initial": [
+    {
+      "id": "player",
+      "x": 160,
+      "y": 100,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-grenade",
+      "x": 1907,
+      "y": 1207,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 2215,
+      "y": 1000,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 3752,
+      "y": 846,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 3079,
+      "y": 1008,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 4113,
+      "y": 800,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-02",
+      "x": 4327,
+      "y": 800,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "star",
+      "x": 7731,
+      "y": 950,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "later": [
+    {
+      "id": "player",
+      "x": 160,
+      "y": 104.41,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "obtain-grenade",
+      "x": 1907,
+      "y": 1207,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    },
+    {
+      "id": "mouse-01",
+      "x": 2215,
+      "y": 1141,
+      "vx": 0,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "helidude-01",
+      "x": 2856.29,
+      "y": 1057.45,
+      "vx": 0.03,
+      "vy": 0.2,
+      "health": "1"
+    },
+    {
+      "id": "helidude-02",
+      "x": 3690.62,
+      "y": 1053.18,
+      "vx": -0.2,
+      "vy": 0,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-01",
+      "x": 3878.9,
+      "y": 904.93,
+      "vx": -0.15,
+      "vy": -0.04,
+      "health": "1"
+    },
+    {
+      "id": "hedgehog-02",
+      "x": 4518.26,
+      "y": 887.49,
+      "vx": -0.15,
+      "vy": 0.02,
+      "health": "1"
+    },
+    {
+      "id": "star",
+      "x": 7731,
+      "y": 950,
+      "vx": 0,
+      "vy": 0,
+      "health": null
+    }
+  ],
+  "queued": null
+}
+`;
