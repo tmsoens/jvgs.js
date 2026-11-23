@@ -76,22 +76,3 @@ so every run is deterministic.
 If a snapshot test fails after a change that is *supposed* to alter behaviour or visuals, look at the
 diff, then run `npm run test:update` and commit the new snapshots.
 
-## Differences from the original
-
-- **Music**: the original never had its music in git. If you put the files at
-  `resources/music/<name>.ogg` and rebuild, they will play.
-- **Timing**: updates run at a fixed 60 Hz no matter what the display refresh rate is. The
-  original ran at most 60 updates/s using real elapsed time.
-- **Quitting**: quitting (Esc, or walking into "quit") shows a screen where Enter starts the game
-  again, since a browser tab can't just exit.
-- **Saves**: progress is saved in `localStorage` instead of `~/.jvgs.xml`.
-- **Item key**: X and Z work as well as left ctrl, because macOS often takes ctrl+arrow for itself.
-- **Kept on purpose**: original quirks that affect gameplay or visuals are reproduced as-is: `z`
-  doesn't close paths, `H`/`V` path commands are ignored, and the swept bounding-box test and the
-  matrix composition order are unchanged.
-
-## License
-
-This port is released under the GNU General Public License, version 2 (see `LICENSE`).
-
-The original game is © Jasper Van der Jeugt, released under the WTFPL.
