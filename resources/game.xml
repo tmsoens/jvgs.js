@@ -4,7 +4,7 @@
     credits that follow the last level.
 
     To add a level, add a <level> line where it should be played. Its exit
-    entity uses script="common-scripts/level-exit"; touching it plays the next
+    entity uses script="level-exit"; touching it plays the next
     level in this list (or the credits after the last one).
 -->
 <game>

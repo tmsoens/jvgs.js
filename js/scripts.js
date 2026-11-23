@@ -1,9 +1,10 @@
 // The game's Lua scripts (resources/**/*.lua and resources/modules/*.lua),
-// ported to JavaScript. Each entity names its script with a plain id (its
-// original path minus "resources/" and ".lua", e.g. "level-city/cloud" or
-// "common-scripts/enemy"); the ScriptManager looks up the handler table
-// registered under that id and calls the handler for the event type with
-// (self, event), which is what `events.trigger{...}` did in Lua.
+// ported to JavaScript. Each entity names its script with a plain id: the
+// shared ones are bare names ("enemy", "level-exit", "tutorial"), the rest
+// keep their original path minus "resources/" and ".lua" (e.g. "level-four/crown").
+// The ScriptManager looks up the handler table registered under that id and
+// calls the handler for the event type with (self, event), which is what
+// `events.trigger{...}` did in Lua.
 "use strict";
 
 /** Lua's math.random(m, n): integer in [m, n] (arguments truncated). */
@@ -188,9 +189,9 @@ ScriptManager.register("player/script", {
     },
 });
 
-/* --- common-scripts ---------------------------------------------------- */
+/* --- common scripts ----------------------------------------------------- */
 
-ScriptManager.register("common-scripts/enemy", {
+ScriptManager.register("enemy", {
     collision(self, event) {
         const collider = event.getCollider();
         // React only on player collision.
@@ -205,7 +206,7 @@ ScriptManager.register("common-scripts/enemy", {
     },
 });
 
-ScriptManager.register("common-scripts/invincible-enemy", {
+ScriptManager.register("invincible-enemy", {
     collision(self, event) {
         const collider = event.getCollider();
         if (!common.isDead(self) && !common.isDead(collider)) common.damage(collider, 1);
@@ -216,7 +217,7 @@ ScriptManager.register("common-scripts/invincible-enemy", {
 });
 
 /** A level's exit: touching it lifts the player and plays the next level. */
-ScriptManager.register("common-scripts/level-exit", {
+ScriptManager.register("level-exit", {
     collision(self, event) {
         if (common.isPlayer(event.getCollider())) {
             effects.nextLevelAnimation(event.getCollider());
@@ -240,7 +241,7 @@ function showTutorial(self) {
     effects.staticText(self.getPosition().add(offset), self.get("text"));
 }
 
-ScriptManager.register("common-scripts/tutorial", {
+ScriptManager.register("tutorial", {
     spawn(self) {
         if (self.get("show") === "spawn") showTutorial(self);
     },

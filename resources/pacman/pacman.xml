@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entity script="common-scripts/invincible-enemy" speed = "0.25"
+<entity script="invincible-enemy" speed = "0.25"
         collisionchecker="false">
     <controller type="bullcontroller" sight="10000" target="player" />
     <positioner type="collisionresponsepositioner">

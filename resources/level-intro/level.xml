@@ -4,18 +4,18 @@
     <entity id="player" filename="resources/player/player.xml">
         <position x="320" y="280" />
     </entity>
-    <entity id="tutorial-intro" script="common-scripts/tutorial">
+    <entity id="tutorial-intro" script="tutorial">
         <position x="420" y="270" />
         <entry key="text" value="arrow keys to walk" />
         <entry key="show" value="spawn" />
     </entity>
-    <entity id="tutorial-02" script="common-scripts/tutorial">
+    <entity id="tutorial-02" script="tutorial">
         <position x="1040" y="250" />
         <radius x="100" y="100" />
         <entry key="text" value="spacebar to jump" />
         <entry key="offset-y" value="-80" />
     </entity>
-    <entity id="tutorial-03" script="common-scripts/tutorial">
+    <entity id="tutorial-03" script="tutorial">
         <position x="2273" y="100" />
         <radius x="100" y="100" />
         <entry key="text" value="jump on enemies to kill them" />
@@ -26,7 +26,7 @@
     <entity id="mouse-02" filename="resources/mouse/mouse.xml">
         <position x="2940" y="180" />
     </entity>
-    <entity id="tutorial-04" script="common-scripts/tutorial">
+    <entity id="tutorial-04" script="tutorial">
         <position x="2980" y="190" />
         <radius x="100" y="100" />
         <entry key="text" value="do not jump on spikey enemies" />
@@ -35,7 +35,7 @@
         <position x="3500" y="100" />
         <controller type="patrollingcontroller" x1="3150" x2="3750" />
     </entity>
-    <entity id="heart" script="common-scripts/level-exit">
+    <entity id="heart" script="level-exit">
         <position x="4360" y="260" />
         <radius x="50" y="50" />
     </entity>

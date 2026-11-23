@@ -38,15 +38,15 @@ the glyph outlines from `resources/font.ttf`, which the game draws with the sket
 To add a level:
 
 1. Make `resources/level-<name>/level.xml` (and its `world.svg`).
-2. Give it an exit: an entity with `script="common-scripts/level-exit"`. Touching it plays the next level
+2. Give it an exit: an entity with `script="level-exit"`. Touching it plays the next level
    in `game.xml`. After the last level come the credits, and the save starts over.
 3. Add `<level filename="resources/level-<name>/level.xml" />` to `game.xml` where it should be played.
 4. Run `node tools/build-resources.mjs`.
 
-Tutorial hints are entities with `script="common-scripts/tutorial"`, configured by entries:
+Tutorial hints are entities with `script="tutorial"`, configured by entries:
 
 ```xml
-<entity id="tutorial-02" script="common-scripts/tutorial">
+<entity id="tutorial-02" script="tutorial">
     <position x="1040" y="250" />
     <radius x="100" y="100" />
     <entry key="text" value="spacebar to jump" />
