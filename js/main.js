@@ -69,7 +69,7 @@
             window.removeEventListener("keydown", restart);
             InputManager.quitEvent = false;
             EffectManager.clear();
-            LevelManager.queueLevel("resources/level-main-menu/main-menu.xml");
+            LevelManager.queueLevel(GameManager.getMenu());
             LevelManager.processQueue();
             running = true;
             last = performance.now();
@@ -79,7 +79,7 @@
         window.addEventListener("keydown", restart);
     }
 
-    LevelManager.queueLevel("resources/level-main-menu/main-menu.xml");
+    LevelManager.queueLevel(GameManager.getMenu());
     LevelManager.processQueue();
     requestAnimationFrame(frame);
 })();

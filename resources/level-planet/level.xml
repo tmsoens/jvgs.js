@@ -35,7 +35,7 @@
             <point x="2243" y="650" />
         </controller>
     </entity>
-    <entity id="star" script="level-planet/star">
+    <entity id="star" script="common-scripts/level-exit">
         <position x="1564" y="490" />
         <radius x="70" y="70" />
     </entity>

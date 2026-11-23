@@ -134,6 +134,92 @@ describe("level progression", () => {
     });
 });
 
+describe("game.xml", () => {
+    /** A game whose resources/game.xml is replaced by `xml`. */
+    function withGameXml(xml, options) {
+        const game = createGame(options);
+        game.get("window.JVGS_RESOURCES").files["resources/game.xml"] = xml;
+        game.get("GameManager").load();
+        return game;
+    }
+    const custom = `<game>
+        <menu filename="${MENU}" />
+        <level filename="resources/level-run/level.xml" />
+        <level filename="resources/level-intro/level.xml" />
+        <credits filename="resources/level-credits/level.xml" />
+    </game>`;
+
+    test("lists the levels in the order they are played", () => {
+        const game = createGame();
+        const GameManager = game.get("GameManager");
+        assert.equal(GameManager.getMenu(), MENU);
+        assert.equal(GameManager.getCredits(), "resources/level-credits/level.xml");
+        assert.equal(GameManager.getFirstLevel(), INTRO);
+        assert.equal(GameManager.getLevels().at(-1), "resources/level-end/level.xml");
+    });
+
+    test("the order of play follows the list, not the levels", () => {
+        const game = withGameXml(custom);
+        game.load(MENU);
+        game.hold("right");
+        game.run(15000, () => game.queuedLevel());
+        assert.equal(game.queuedLevel(), "resources/level-run/level.xml", "a fresh save starts at the first level");
+
+        game.LevelManager.processQueue();
+        game.releaseAll();
+        game.run(1000);
+        game.teleport("triforce");
+        assert.ok(game.run(2500, () => game.queuedLevel()));
+        assert.equal(game.queuedLevel(), INTRO);
+        assert.deepEqual(JSON.parse(game.storage.get("jvgs")), { level: INTRO });
+
+        game.LevelManager.processQueue();
+        game.run(1000);
+        game.teleport("heart");
+        assert.ok(game.run(2500, () => game.queuedLevel()));
+        assert.equal(game.queuedLevel(), "resources/level-credits/level.xml", "credits after the last level");
+        assert.deepEqual(JSON.parse(game.storage.get("jvgs")), { level: "resources/level-run/level.xml" },
+            "the save starts over");
+    });
+
+    test("a saved level that is no longer in the list starts at the first level", () => {
+        const game = createGame({ storage: { jvgs: JSON.stringify({ level: "resources/level-gone/level.xml" }) } });
+        game.load(MENU);
+        game.hold("right");
+        game.run(15000, () => game.queuedLevel());
+        assert.equal(game.queuedLevel(), INTRO);
+    });
+});
+
+describe("tutorials", () => {
+    const texts = game => [...game.get("EffectManager").effects].filter(e => e.text).map(e => ({
+        text: e.text, x: e.position.x, y: e.position.y,
+    }));
+
+    test("a 'spawn' tutorial shows its text when the level starts", () => {
+        const game = createGame();
+        game.load(INTRO);
+        game.step(1);
+        assert.deepEqual(texts(game), [{ text: "arrow keys to walk", x: 420, y: 170 }]);
+        assert.ok(game.entity("tutorial-intro"), "it stays");
+    });
+
+    test("touching a tutorial shows its text at the offset and removes it", () => {
+        const game = playing(INTRO);
+        game.teleport("tutorial-02");
+        game.step(2);
+        assert.deepEqual(texts(game).at(-1), { text: "spacebar to jump", x: 1040, y: 170 });
+        assert.equal(game.entity("tutorial-02"), null);
+    });
+
+    test("the offset defaults to 100 above the entity", () => {
+        const game = playing(INTRO);
+        game.teleport("tutorial-03");
+        game.step(2);
+        assert.deepEqual(texts(game).at(-1), { text: "jump on enemies to kill them", x: 2273, y: 0 });
+    });
+});
+
 describe("enemies", () => {
     test("jumping on an enemy kills it", () => {
         const game = playing(INTRO);

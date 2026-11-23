@@ -86,7 +86,7 @@
             <point x="2400" y="207" />
         </controller>
     </entity>
-    <entity id="cloud" script="level-city/cloud">
+    <entity id="cloud" script="common-scripts/level-exit">
         <position x="9220" y="1080" />
         <radius x="150" y="100" />
     </entity>

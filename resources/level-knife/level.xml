@@ -36,7 +36,7 @@
         <position x="7600" y="350" />
         <controller type="patrollingcontroller" x1="7200" x2="7600" />
     </entity>
-    <entity id="star" script="level-knife/star">
+    <entity id="star" script="common-scripts/level-exit">
         <position x="6606" y="170" />
         <radius x="50" y="50" />
     </entity>

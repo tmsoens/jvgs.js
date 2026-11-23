@@ -775,6 +775,7 @@ const LevelManager = {
     level: null,
     queue: false,
     queueFileName: "",
+    fileName: "",
     timeFactor: 1,
 
     getLevel() { return this.level; },
@@ -807,8 +808,51 @@ const LevelManager = {
         SketchManager.clear();
         EntityEventManager.clear();
         this.queue = false;
+        this.fileName = this.queueFileName;
         this.level = new Level(this.queueFileName);
         this.timeFactor = 1;
         return true;
+    },
+    /** File name of the level that is currently loaded. */
+    getFileName() { return this.fileName; },
+};
+
+/**
+ * The order of play, read from resources/game.xml: the menu, the levels in
+ * order, and the credits shown after the last level.
+ */
+const GameManager = {
+    FILE: "resources/game.xml",
+    menu: "",
+    credits: "",
+    levels: [],
+    loaded: false,
+
+    load(fileName = this.FILE) {
+        const root = Resources.xml(fileName);
+        const file = (tag) => {
+            const element = firstChildElement(root, tag);
+            return element ? element.getAttribute("filename") : null;
+        };
+        this.menu = file("menu");
+        this.credits = file("credits");
+        this.levels = childElements(root, "level").map(e => e.getAttribute("filename"));
+        if (!this.menu) console.error(fileName + ": no <menu filename=...>");
+        if (!this.levels.length) console.error(fileName + ": no <level filename=...>");
+        this.loaded = true;
+    },
+    ensureLoaded() { if (!this.loaded) this.load(); },
+
+    getMenu() { this.ensureLoaded(); return this.menu; },
+    getCredits() { this.ensureLoaded(); return this.credits; },
+    getLevels() { this.ensureLoaded(); return this.levels; },
+    getFirstLevel() { return this.getLevels()[0]; },
+    isLevel(fileName) { return this.getLevels().includes(fileName); },
+    /** The level after `fileName`, or null after the last one. */
+    getNextLevel(fileName) {
+        const levels = this.getLevels();
+        const i = levels.indexOf(fileName);
+        if (i < 0) console.error("Not a level in " + this.FILE + ": " + fileName);
+        return i >= 0 && i + 1 < levels.length ? levels[i + 1] : null;
     },
 };

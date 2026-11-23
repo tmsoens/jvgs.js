@@ -53,7 +53,7 @@
         <position x="4327" y="800" />
         <controller type="patrollingcontroller" x1="4260" x2="4700" />
     </entity>
-    <entity id="star" script="level-sea/star">
+    <entity id="star" script="common-scripts/level-exit">
         <position x="7731" y="950" />
         <radius x="70" y="70" />
     </entity>

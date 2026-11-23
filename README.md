@@ -32,6 +32,29 @@ node tools/build-resources.mjs
 The build embeds the SVG/XML files as text and the `.ogg` sounds as data URLs. It also extracts
 the glyph outlines from `resources/font.ttf`, which the game draws with the sketchy renderer.
 
+## The game and its levels
+
+`resources/game.xml` lists the menu, the levels in the order they are played, and the credits.
+To add a level:
+
+1. Make `resources/level-<name>/level.xml` (and its `world.svg`).
+2. Give it an exit: an entity with `script="common-scripts/level-exit"`. Touching it plays the next level
+   in `game.xml`. After the last level come the credits, and the save starts over.
+3. Add `<level filename="resources/level-<name>/level.xml" />` to `game.xml` where it should be played.
+4. Run `node tools/build-resources.mjs`.
+
+Tutorial hints are entities with `script="common-scripts/tutorial"`, configured by entries:
+
+```xml
+<entity id="tutorial-02" script="common-scripts/tutorial">
+    <position x="1040" y="250" />
+    <radius x="100" y="100" />
+    <entry key="text" value="spacebar to jump" />
+    <entry key="offset-y" value="-80" />   <!-- where the text goes; default 0, -100 -->
+    <!-- <entry key="show" value="spawn" />  show at the start instead of on touch -->
+</entity>
+```
+
 ## Tests
 
 ```sh

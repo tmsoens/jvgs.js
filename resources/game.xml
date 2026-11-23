@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+    The whole game: the menu, the levels in the order they are played, and the
+    credits that follow the last level.
+
+    To add a level, add a <level> line where it should be played. Its exit
+    entity uses script="common-scripts/level-exit"; touching it plays the next
+    level in this list (or the credits after the last one).
+-->
+<game>
+    <menu filename="resources/level-main-menu/main-menu.xml" />
+    <level filename="resources/level-intro/level.xml" />
+    <level filename="resources/level-sea/level.xml" />
+    <level filename="resources/level-planet/level.xml" />
+    <level filename="resources/level-knife/level.xml" />
+    <level filename="resources/level-nostalgia/level.xml" />
+    <level filename="resources/level-run/level.xml" />
+    <level filename="resources/level-city/level.xml" />
+    <level filename="resources/level-four/level.xml" />
+    <level filename="resources/level-contact/level.xml" />
+    <level filename="resources/level-end/level.xml" />
+    <credits filename="resources/level-credits/level.xml" />
+</game>

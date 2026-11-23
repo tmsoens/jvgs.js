@@ -1113,8 +1113,8 @@ exports[`levels > resources/level-intro/level.xml 1`] = `
     },
     {
       "id": "tutorial-intro",
-      "x": 0,
-      "y": 0,
+      "x": 420,
+      "y": 270,
       "vx": 0,
       "vy": 0,
       "health": null
@@ -1187,8 +1187,8 @@ exports[`levels > resources/level-intro/level.xml 1`] = `
     },
     {
       "id": "tutorial-intro",
-      "x": 0,
-      "y": 0,
+      "x": 420,
+      "y": 270,
       "vx": 0,
       "vy": 0,
       "health": null

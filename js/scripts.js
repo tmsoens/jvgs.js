@@ -28,15 +28,24 @@ const common = {
     damage(entity, amount) {
         if (entity.isSet("health")) entity.set("health", Number(entity.get("health")) - amount);
     },
-    gameOver() { LevelManager.queueLevel("resources/level-main-menu/main-menu.xml"); },
-    nextLevel(fileName) {
-        PersistenceManager.set("level", fileName);
-        LevelManager.queueLevel(fileName);
+    gameOver() { LevelManager.queueLevel(GameManager.getMenu()); },
+    /**
+     * Plays the level after the current one in resources/game.xml and saves
+     * it. After the last level come the credits, and the save starts over.
+     */
+    nextLevel() {
+        const next = GameManager.getNextLevel(LevelManager.getFileName());
+        if (next) {
+            PersistenceManager.set("level", next);
+            LevelManager.queueLevel(next);
+        } else {
+            PersistenceManager.set("level", GameManager.getFirstLevel());
+            LevelManager.queueLevel(GameManager.getCredits());
+        }
     },
     continue() {
-        const fileName = PersistenceManager.isSet("level")
-            ? PersistenceManager.get("level") : "resources/level-intro/level.xml";
-        LevelManager.queueLevel(fileName);
+        const saved = PersistenceManager.get("level");
+        LevelManager.queueLevel(GameManager.isLevel(saved) ? saved : GameManager.getFirstLevel());
     },
     dispose(entity) { entity.setPosition(new Vector2D(-100000, -100000)); },
 };
@@ -93,18 +102,6 @@ const ScriptManager = {
     },
 };
 
-/** Common pattern: touching it lifts the player and moves to `next`. */
-function levelExit(next) {
-    return {
-        collision(self, event) {
-            if (common.isPlayer(event.getCollider())) {
-                effects.nextLevelAnimation(event.getCollider());
-                self.setTimer(2000);
-            }
-        },
-        timer() { common.nextLevel(next); },
-    };
-}
 
 /** Common pattern: picking up a weapon. */
 function weaponPickup(weapon, hint) {
@@ -117,16 +114,6 @@ function weaponPickup(weapon, hint) {
                 self.setGarbage();
                 effects.staticText(self.getPosition().add(new Vector2D(0, -100)), hint);
             }
-        },
-    };
-}
-
-function tutorial(text, offsetFromSelf, fixedPosition) {
-    return {
-        collision(self) {
-            const pos = fixedPosition || self.getPosition().add(offsetFromSelf);
-            effects.staticText(pos, text);
-            self.setGarbage();
         },
     };
 }
@@ -228,6 +215,42 @@ ScriptManager.register("common-scripts/invincible-enemy", {
     },
 });
 
+/** A level's exit: touching it lifts the player and plays the next level. */
+ScriptManager.register("common-scripts/level-exit", {
+    collision(self, event) {
+        if (common.isPlayer(event.getCollider())) {
+            effects.nextLevelAnimation(event.getCollider());
+            self.setTimer(2000);
+        }
+    },
+    timer() { common.nextLevel(); },
+});
+
+/**
+ * A tutorial hint, configured by the entity's entries:
+ *   text               what to show
+ *   offset-x, offset-y where to show it, relative to the entity (default 0, -100)
+ *   show               "touch" (default): when something touches the entity,
+ *                      which then disappears; "spawn": as soon as the level starts
+ */
+function showTutorial(self) {
+    const offset = new Vector2D(
+        self.isSet("offset-x") ? Number(self.get("offset-x")) : 0,
+        self.isSet("offset-y") ? Number(self.get("offset-y")) : -100);
+    effects.staticText(self.getPosition().add(offset), self.get("text"));
+}
+
+ScriptManager.register("common-scripts/tutorial", {
+    spawn(self) {
+        if (self.get("show") === "spawn") showTutorial(self);
+    },
+    collision(self) {
+        if (self.get("show") === "spawn") return;
+        showTutorial(self);
+        self.setGarbage();
+    },
+});
+
 /* --- weapons ----------------------------------------------------------- */
 
 ScriptManager.register("knife/obtain-knife",
@@ -311,25 +334,6 @@ ScriptManager.register("level-main-menu/quit", {
 
 /* --- level scripts ----------------------------------------------------- */
 
-ScriptManager.register("level-intro/tutorial-01", {
-    spawn() { effects.staticText(new Vector2D(420, 170), "arrow keys to walk"); },
-});
-ScriptManager.register("level-intro/tutorial-02",
-    tutorial("spacebar to jump", null, new Vector2D(1040, 170)));
-ScriptManager.register("level-intro/tutorial-03",
-    tutorial("jump on enemies to kill them", new Vector2D(0, -100)));
-ScriptManager.register("level-intro/tutorial-04",
-    tutorial("do not jump on spikey enemies", new Vector2D(0, -100)));
-
-ScriptManager.register("level-intro/heart", levelExit("resources/level-sea/level.xml"));
-ScriptManager.register("level-sea/star", levelExit("resources/level-planet/level.xml"));
-ScriptManager.register("level-planet/star", levelExit("resources/level-knife/level.xml"));
-ScriptManager.register("level-knife/star", levelExit("resources/level-nostalgia/level.xml"));
-ScriptManager.register("level-nostalgia/spiral", levelExit("resources/level-run/level.xml"));
-ScriptManager.register("level-run/triforce", levelExit("resources/level-city/level.xml"));
-ScriptManager.register("level-city/cloud", levelExit("resources/level-four/level.xml"));
-ScriptManager.register("level-contact/girl", levelExit("resources/level-end/level.xml"));
-
 ScriptManager.register("level-four/crown", {
     collision(self, event) {
         const collider = event.getCollider();
@@ -345,7 +349,7 @@ ScriptManager.register("level-four/crown", {
             }
         }
     },
-    timer() { common.nextLevel("resources/level-contact/level.xml"); },
+    timer() { common.nextLevel(); },
 });
 
 ScriptManager.register("level-four/teleport-to-start", {
@@ -376,8 +380,5 @@ ScriptManager.register("level-end/end", {
             self.setBool("girl-arrived", true);
         }
     },
-    timer() {
-        common.nextLevel("resources/level-credits/level.xml");
-        PersistenceManager.set("level", "resources/level-intro/level.xml");
-    },
+    timer() { common.nextLevel(); },
 });

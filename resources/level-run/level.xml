@@ -19,7 +19,7 @@
     <entity id="velociraptor-01" filename="resources/velociraptor/velociraptor.xml">
         <position x="1466" y="5200" />
     </entity>
-    <entity id="triforce" script="level-run/triforce">
+    <entity id="triforce" script="common-scripts/level-exit">
         <position x="700" y="5230" />
         <radius x="50" y="50" />
     </entity>

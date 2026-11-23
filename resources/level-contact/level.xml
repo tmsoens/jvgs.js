@@ -156,7 +156,7 @@
             <point x="946" y="1193" />
         </controller>
     </entity>
-    <entity id="girl" script="level-contact/girl">
+    <entity id="girl" script="common-scripts/level-exit">
         <radius x="40" y="50" />
         <position x="4430" y="2150" />
     </entity>

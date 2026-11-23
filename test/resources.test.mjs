@@ -123,3 +123,14 @@ test("entity ids are unique within a level", () => {
         assert.deepEqual(ids.filter((id, i) => ids.indexOf(id) !== i), [], `${file} has duplicate entity ids`);
     }
 });
+
+test("resources/game.xml plays every level exactly once", () => {
+    const root = parse("resources/game.xml");
+    const file = tag => root.children.find(c => c.tagName === tag)?.getAttribute("filename");
+    const levels = root.children.filter(c => c.tagName === "level").map(c => c.getAttribute("filename"));
+    assert.ok(levels.length > 0);
+    const listed = [file("menu"), file("credits"), ...levels];
+    assert.deepEqual(listed.filter((f, i) => listed.indexOf(f) !== i), [], "listed more than once");
+    const levelXml = xmlFiles.filter(f => parse(f).tagName === "level");
+    assert.deepEqual([...listed].sort(), levelXml, "every <level> file is in game.xml, and nothing else");
+});
